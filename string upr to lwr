@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+   char s[20];
+    printf("enter string");
+    gets(s);
+    strlwr(s);
+    printf("string in lowercase=%s",s);
+}
