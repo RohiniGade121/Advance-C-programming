@@ -1,0 +1,40 @@
+/*write a c program to interchanged two numbers using pointer*/
+#include<stdio.h>
+void main()
+{
+    int a,b,*p1,*p2,t;
+     printf("enter two numbers");
+     scanf("%d%d",&a,&b);
+     p1=&a;
+     p2=&b;
+     t=*p1;
+     *p1=*p2;
+     *p2=t;
+     printf("interchanged number=\n%d\n%d",a,b);
+}
+
+-------------------------------------------------------------------------------------
+
+/*write c program to count the vowels and consonants in a string*/
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char s[20];
+    int i,c1=0,c2=0;
+     printf("enter string");
+     gets(s);
+     for(i=0;s[i]!='\0';i++)
+     {
+        if(s[i]=='a'||s[i]=='A'||s[i]=='e'||s[i]=='E'||
+           s[i]=='i'||s[i]=='I'||
+           s[i]=='o'||s[i]=='O'||s[i]=='u'||s[i]=='U')
+         c1++;
+        else 
+         c2++;   
+     }
+     printf("vowels count in string=%d",c1);
+     printf("consonant count in string=%d",c2);
+
+
+}
