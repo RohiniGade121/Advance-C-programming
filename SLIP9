@@ -1,0 +1,27 @@
+/*write a C program to find the area of a circle by using PI as macro*/
+#include<stdio.h>
+#define PI 3.14
+ void main()
+ {
+    printf("area of circle=%f",PI*3.5*3.5);
+ }
+ 
+ ------------------------------------------------------------------------------------------------------------
+ 
+ /*write a program to perform the following operations on strings using standard library functions */
+#include<stdio.h>
+#include<string.h>
+ void main()
+{
+    char s1[20],s2[20];
+    printf("enter first string");
+    gets(s1);
+    printf("enter second string");
+    gets(s2);
+    strcpy(s1,s2);
+    strupr(s1);
+     strupr(s2);
+    printf("first string=%s",s1);
+    printf("second string=%s",s2);
+    printf("strings in uppercase=%s%s",s1,s2);
+}
