@@ -1,0 +1,20 @@
+/*write a program to read contents of a text file and display on screen*/
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+ char ch;
+ FILE *f1;
+f1=fopen("slip1.c","r");
+ if(f1==NULL)
+ {
+  printf("file not found");
+  exit(0);
+}
+while(!feof(f1))
+{
+  ch=fgetc(f1);
+  printf("%c",(ch));
+}
+ fclose(f1);
+}
