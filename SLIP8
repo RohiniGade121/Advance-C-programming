@@ -1,3 +1,20 @@
+/*write a program to calculate length of string using standard library function*/
+#include<stdio.h>
+#include<string.h>
+ void main()  
+                         
+ {
+    char s[20];
+    int l;
+     printf("enter string");
+     gets(s);
+      l=strlen(s);
+     printf("length of string=%d",l); 
+ }
+  
+------------------------------------------------------------------------------------------
+
+
 /*Write a C program to read a text file and display all the characters 
 such that the case is reversed ...*/
 #include<stdio.h>
