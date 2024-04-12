@@ -1,0 +1,45 @@
+/*write a program using macro to find maximum of two numbers*/
+#include<stdio.h>
+#define MAX(a,b) a>b?a:b
+
+    void main()
+ {
+
+  printf("Maximum number=%d",MAX(56,67));
+ }
+ 
+ 
+ ----------------------------------------------------------------------------------------
+ 
+ /*write a program to read the contents of a text file and count 
+the number of characters,lines and word in the file..*/
+#include<stdio.h>
+#include<stdlib.h>
+ void main()
+{
+ char ch,s[20];
+ FILE *f1;
+ int c1=0,c2=0,c3=0;
+ printf("enter file name");
+ scanf("%s",&s);
+f1=fopen(s,"r");
+if(f1==NULL)
+{
+  printf("file not found");
+ exit(0);
+}
+while(!feof(f1))
+{
+  ch=fgetc(f1);
+  if((ch>='A' && ch<='Z')||(ch>='a' &&ch<='z'))
+  c1=c1+1;
+ else if(ch==' '||ch=='\n')
+  c2=c2+1;
+ if(ch=='\n')
+  c3=c3+1;
+}
+ fclose(f1);
+ printf("\n character count=%d",c1);
+printf("\n words count=%d",c2);
+printf("\n lines count=%d",c3);
+}
