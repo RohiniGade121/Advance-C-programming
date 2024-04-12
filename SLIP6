@@ -1,0 +1,59 @@
+/* accept string and compare both strings.*/
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+   int k;
+   char s1[20],s2[20];
+    printf("enter first string");
+    gets(s1);
+    printf("enter second string");
+    gets(s2);
+    k=strcmp(s1,s2);
+     if(k==0)
+      printf("both strings are same");
+     else if(k>=0)
+     printf("first string is greater"); 
+     else 
+      printf("second string is greater"); 
+}
+
+-----------------------------------------------------------------------------------
+/*Write a C program to copy the contents of one text file to another such 
+that uppercase alphabates are converted to lowercase,lowercase to 
+uppercase and digits are converted to *...*/
+#include<stdio.h>
+#include<stdlib.h>
+#include<ctype.h>
+void main()
+{
+    FILE *f1,*f2;
+    char ch,s1[20],s2[20];
+     printf("enter first filename");
+     scanf("%s",s1);
+     printf("enter second filename");
+     scanf("%s",s2);
+     f1=fopen(s1,"r");
+     f2=fopen(s2,"w");
+      if(f1==NULL)
+       {
+        printf("file not found");
+         exit(0);
+       }
+       while(!feof(f1))
+       {
+        ch=fgetc(f1);
+         if(isupper(ch))
+           fputc(tolower(ch),f2);
+          else if(islower(ch))
+           fputc(toupper(ch),f2);
+          if(isdigit(ch))
+           fputc('*',f2);   
+
+       }
+       fclose(f1);
+       fclose(f2);
+       printf("file copied succesfully");
+    
+     
+}
