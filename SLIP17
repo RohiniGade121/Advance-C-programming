@@ -1,0 +1,16 @@
+/*write a program to interchanged two numbers using pointers*/
+#include<stdio.h>
+ void main()
+ {
+     int a,b,*p1,*p2,t;
+     printf("enter two numbers");
+     scanf("%d%d",&a,&b);
+     p1=&a;
+     p2=&b;
+     t=*p1;
+     *p1=*p2;
+     *p2=t;
+     printf("\n first value=%d",a);
+     printf("second value=%d",b);
+
+ }
