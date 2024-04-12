@@ -1,0 +1,23 @@
+/*write a program to copy contents of one file to another*/
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+ char ch;
+ FILE *f1,*f2;
+f1=fopen("slip1.c","r");
+f2=fopen("student.txt","w");
+ if(f1==NULL)
+ {
+  printf("file not found");
+  exit(0);
+}
+while(!feof(f1))
+{
+  ch=fgetc(f1);
+  fputc(ch,f2);
+}
+ fclose(f1);
+fclose(f2);
+ printf("file copied successfully...");
+}
